@@ -1,24 +1,53 @@
-import logo from './logo.svg';
 import './App.css';
+import React, {useState, useEffect} from 'react';
+import { uzeGet } from './customhooks/crudhook.js';
+import {Bar, Pie} from 'react-chartjs-2';
+import Template from './Template'
+
 
 function App() {
+  //const Template = Template();
+  const state = {}
+
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+    <Template />
+
+{/* <Bar
+          data={state}
+          options={{
+            title:{
+              display:true,
+              text:'Average Rainfall per month',
+              fontSize:20
+            },
+            legend:{
+              display:true,
+              position:'right'
+            }
+          }}
+        />
+
+<Pie
+          data={state}
+          options={{
+            title:{
+              display:true,
+              text:'Average Rainfall per month',
+              fontSize:20
+            },
+            legend:{
+              display:true,
+              position:'right'
+            }
+          }}
+        />
+  */}
+     
+    </>
+      
   );
 }
 
